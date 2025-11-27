@@ -1,0 +1,53 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/.mvn/
+/mvnw
+/mvnw.cmd
+
+### Local tools and runtime distributions (ignore local archives and unpacked folders)
+/apache-maven-3.9.9/
+/apache-maven-3.9.9-bin.tar.gz
+/jdk8u422-b05/
+/OpenJDK8U-jdk_x64_linux.tar.gz
+
+### PostgreSQL data and local DB files
+/pg/
+/pgdata/
+/postgresql-15.8/
+/pg.pass
+
+### Build artifacts, packaged archives and logs
+/auth-server.jar.original
+*.tar.gz
+*.zip
+*.gz
+*.log
+
+### Keep IDE and common build ignores (already present above)
+# (entries for IntelliJ, NetBeans, STS and Maven wrapper preserved)
+
+### If you want to track application.yml, remove the following line
+application.yml
