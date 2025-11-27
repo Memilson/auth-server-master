@@ -38,6 +38,7 @@
 /pgdata/
 /postgresql-15.8/
 /pg.pass
+/auth.db
 
 ### Build artifacts, packaged archives and logs
 /auth-server.jar.original

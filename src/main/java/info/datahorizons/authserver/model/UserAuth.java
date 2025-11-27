@@ -7,14 +7,15 @@ import java.util.List;
 import java.util.Map;
 
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.hibernate.annotations.Type;
 import org.springframework.security.core.token.Sha512DigestUtils;
 
 @Entity
@@ -43,8 +44,9 @@ public class UserAuth extends BaseEntity{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date passDate = new Date();
 	
-	@Type(type = "jsonb")
-	@Column(columnDefinition = "jsonb")
+	@Lob
+	@Convert(converter = JsonMapConverter.class)
+	@Column(columnDefinition = "TEXT")
 	private Map<String, Object> extra = new HashMap<String, Object>();
 
 	public void setPasswordRaw(String password) {
